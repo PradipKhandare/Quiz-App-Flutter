@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen(this.startQuiz, {super.key});
@@ -25,9 +26,12 @@ class WelcomeScreen extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          const Text(
+           Text(
             "Learn flutter the fun way!",
-            style: TextStyle(color: Colors.white, fontSize: 24),
+            style: GoogleFonts.lato(
+              color: Colors.white,
+              fontSize: 24
+            ),
           ),
           const SizedBox(
             height: 30,
@@ -36,8 +40,8 @@ class WelcomeScreen extends StatelessWidget {
             onPressed: startQuiz,
             style: ButtonStyle(
               backgroundColor:
-                  WidgetStateProperty.all<Color>(Colors.deepPurple),
-              shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+              MaterialStateProperty.all<Color>(Colors.deepPurple),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero,
                     side: BorderSide(color: Colors.black, width: 0.5)),
